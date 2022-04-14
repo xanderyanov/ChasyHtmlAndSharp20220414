@@ -62,18 +62,18 @@ gulp.task("css", function () {
 // });
 
 var vendorsCssFiles = [
-	"/node_modules/sweetalert/dist/sweetalert.css",
-	"/node_modules/nouislider/distribute/nouislider.min.css",
-	"/node_modules/swiper/swiper-bundle.min.css",
-	"/node_modules/@fancyapps/ui/dist/fancybox.css",
-	"/node_modules/bootstrap/dist/css/bootstrap.min.css",
+	"node_modules/sweetalert/dist/sweetalert.css",
+	"node_modules/nouislider/distribute/nouislider.min.css",
+	"node_modules/swiper/swiper-bundle.min.css",
+	"node_modules/@fancyapps/ui/dist/fancybox.css",
+	"node_modules/bootstrap/dist/css/bootstrap.min.css",
 	"src/assets/libs/bootstrap-icons.css",
 ];
 
 gulp.task("vendorsCss", function () {
 	return (
 		gulp
-			.src(vendorsCssFiles, { base: "btlassets/css" })
+			.src(vendorsCssFiles, { base: "assets/css" })
 			// .pipe(rigger()) //Прогоним через rigger
 
 			.pipe(sourcemaps.init()) //Инициализируем sourcemap
@@ -96,83 +96,60 @@ gulp.task("image", function () {
 			// 		// interlaced: true,
 			// 	})
 			// )
-			.pipe(gulp.dest("build/btlassets/img"))
+			.pipe(gulp.dest("build/assets/img"))
 	);
 });
 
 var vendorsJsFiles = [
-	"/node_modules/jquery/dist/jquery.min.js",
-	"/node_modules/bootstrap/dist/js/bootstrap.min.js",
-	"/node_modules/@fancyapps/ui/dist/fancybox.umd.js",
-	"src/assets/vendors/jquery.maskedinput.js",
-	"src/assets/vendors/nouislider.min.js",
-	"src/assets/vendors/sweetalert.min.js",
-	"src/assets/vendors/swiper-bundle.min.js",
+	"node_modules/jquery/dist/jquery.min.js",
+	"node_modules/bootstrap/dist/js/bootstrap.min.js",
+	"node_modules/@fancyapps/ui/dist/fancybox.umd.js",
+	"node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
+	"node_modules/sweetalert/dist/sweetalert.min.js",
+	"node_modules/swiper/swiper-bundle.min.js",
 ];
 
 gulp.task("vendorsJs", function () {
 	return (
 		gulp
-			.src(vendorsJsFiles, { base: "btlassets/js" })
+			.src(vendorsJsFiles, { base: "assets/js" })
 			// .pipe(rigger()) //Прогоним через rigger
 			.pipe(plumber())
 			.pipe(sourcemaps.init()) //Инициализируем sourcemap
 			.pipe(concat("vendors.js"))
 			.pipe(uglify()) //Сожмем наш js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/btlassets/js"))
+			.pipe(gulp.dest("build/assets/js"))
 	);
 });
 
-var myjsfiles = [
-	"src/assets/js/btl/__globalVar.js",
-	"src/assets/js/btl/__actions.js",
-	"src/assets/js/btl/__bottomAdaptiveMenu.js",
-	"src/assets/js/btl/__callBack.js",
-	"src/assets/js/btl/__comments.js",
-	"src/assets/js/btl/__eCart.js",
-	"src/assets/js/btl/__eCartOrderProcess.js",
-	"src/assets/js/btl/__efilter.js",
-	"src/assets/js/btl/__eSearch.js",
-	"src/assets/js/btl/__eShopCabinet.js",
-	"src/assets/js/btl/__form.js",
-	"src/assets/js/btl/__jsFilter.js",
-	"src/assets/js/btl/__specialist.js",
-	"src/assets/js/btl/__index.js",
-	"src/assets/js/btl/__price.js",
-	"src/assets/js/btl/__layout.js",
-	"src/assets/js/btl/__catalogPage.js",
-	"src/assets/js/btl/__procedure.js",
-	"src/assets/js/btl/__btlGoods.js",
-	"src/assets/js/btl/__portfolio.js",
-	"src/assets/js/btl/__resize.js",
-];
+var myjsfiles = ["src/assets/js/__globalVar.js"];
 
 gulp.task("myJs", function () {
 	return (
 		gulp
 			// .src("src/assets/js/**/*.js*")
 			// .src("src/assets/js/main.js")
-			.src(myjsfiles, { base: "btlassets/js" })
+			.src(myjsfiles, { base: "assets/js" })
 			.pipe(plumber())
 			.pipe(sourcemaps.init()) //Инициализируем sourcemap
 			.pipe(concat("main.js")) // в какой файл объединить
 			// .pipe(uglify()) //Сожмем наш js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/btlassets/js"))
+			.pipe(gulp.dest("build/assets/js"))
 	);
 });
 
 gulp.task("fonts", function () {
-	return gulp.src("src/assets/fonts/**/*.*").pipe(gulp.dest("build/btlassets/fonts"));
+	return gulp.src("src/assets/fonts/**/*.*").pipe(gulp.dest("build/assets/fonts"));
 });
 
 gulp.task("icomoon", function () {
-	return gulp.src("src/assets/icomoon/**/*.*").pipe(gulp.dest("build/btlassets/icomoon"));
+	return gulp.src("src/assets/icomoon/**/*.*").pipe(gulp.dest("build/assets/icomoon"));
 });
 
 gulp.task("video", function () {
-	return gulp.src("src/assets/video/**/*.*").pipe(gulp.dest("build/btlassets/video"));
+	return gulp.src("src/assets/video/**/*.*").pipe(gulp.dest("build/assets/video"));
 });
 
 gulp.task("clean", function () {
@@ -188,7 +165,7 @@ gulp.task(
 );
 
 gulp.task("watch", function () {
-	gulp.watch("src/assets/less/btl/*.less*", gulp.series("css")).on("uplink", function (filepath) {
+	gulp.watch("src/assets/less/*.less*", gulp.series("css")).on("uplink", function (filepath) {
 		remember.forget("css", path.resolve(filepath));
 		delete cached.caches.styles[path.resolve(filepath)];
 	});
@@ -196,7 +173,7 @@ gulp.task("watch", function () {
 		remember.forget("image", path.resolve(filepath));
 		delete cached.caches.image[path.resolve(filepath)];
 	});
-	gulp.watch("src/assets/js/btl/*.js*", gulp.series("myJs")).on("uplink", function (filepath) {
+	gulp.watch("src/assets/js/*.js*", gulp.series("myJs")).on("uplink", function (filepath) {
 		remember.forget("myJs", path.resolve(filepath));
 		delete cached.caches.myJs[path.resolve(filepath)];
 	});

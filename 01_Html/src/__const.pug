@@ -2,8 +2,8 @@ mixin head
   head
     meta(charset='utf-8')
     title= pageTitle
-    meta(name='keywords' content='[[*seokeywords]]')
-    meta(name='description' content='[[*seodescription]]')
+    meta(name='keywords' content='seokeywords')
+    meta(name='description' content='seodescription')
     meta(name='HandheldFriendly' content='True')
     meta(name='MobileOptimized' content='320')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
@@ -34,18 +34,18 @@ mixin head
     meta(name='msapplication-TileImage' content='assets/img/apple/ms-icon-144x144.png')
     meta(name='theme-color' content='#ffffff')
 
-    meta(property='og:url' content='[[*template:in=`1`:then=`[[~[[*id]]]]`:else=`[[++site_url]][[~[[*id]]]]`]]')
+    meta(property='og:url' content='/')
     meta(property='og:type' content='website')
     meta(property='og:title' content=pageTitle)
-    meta(property='og:description' content='[[*seodescription]]')
-    meta(property='og:image' content='[[++assets_url]]img/og-img.jpg')
+    meta(property='og:description' content='seodescription')
+    meta(property='og:image' content='assets/img/og-img.jpg')
 
-    link(rel='stylesheet' href='btlassets/css/vendors.css')
-    link(rel='stylesheet' href='btlassets/css/btl.css')
+    link(rel='stylesheet' href='assets/css/vendors.css')
+    link(rel='stylesheet' href='assets/css/main.css')
 
 mixin scripts
-  script(src='btlassets/js/vendors.js')
-  script(src='btlassets/js/main.js')
+  script(src='assets/js/vendors.js')
+  script(src='assets/js/main.js')
 
 mixin toUp
   .toTop
@@ -210,32 +210,3 @@ mixin gallery
         a(href='btlassets/img/gal/04.jpg', data-fancybox='group', data-caption='002')
           img(src='btlassets/img/gal/04.jpg', alt='1')
 
-mixin search1
-  .search1__overlay
-  .search1__area
-    .search1__wrapper
-      .search1__close
-        i.icon-close2021
-      .search1__outer
-        .search1__box
-          form.search1(action='#', method='get')
-            input.search1__input(type='text', name='', value='', placeholder='Поиск по сайту...')
-            button.search1__btn(type='submit')
-              i.icon-search2
-
-mixin search2
-  .search1__wrapper
-    .search1__close
-      i.icon-close2021
-    .search1__outer
-      .search1__box
-        form.search1(action='#', method='get')
-          input.search1__input(type='text', name='', value='', placeholder='Поиск по сайту...')
-          button.search1__btn(type='submit')
-            i.icon-search2
-
-
-mixin printTop 
-  .printOnlyArea__top 
-    .printOnly
-      img(src="btlassets/img/logo-1.svg", alt="" class="printOnlyTopImg")
