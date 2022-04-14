@@ -1,0 +1,51 @@
+:root {
+  --color1: #534764;
+  --color2: #5f5270;
+  --red1: #d74d63;
+  --red1hover: #ff2525;
+}
+
+
+.stop {
+  overflow: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.xScroll::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--color1);
+}
+
+.xScroll::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color1);
+}
+
+.xScroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--color1);
+}
+
+.xScroll2::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.xScroll2::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+  /* background-color: var(--color1); */
+  background-color: transparent;
+}
+
+.xScroll2::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  /* background-color: #f6e5e4; */
+  background: rgba(173, 136, 184, 0.35);
+}

@@ -1,0 +1,263 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4f4f4f;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  /* font-size: 42px; */
+  font-size: 2.625rem;
+  margin: 0 0 30px 0;
+}
+h2 {
+  /* font-size: 36px; */
+  font-size: 2.25rem;
+  margin: 30px 0 25px 0;
+}
+h3 {
+  /* font-size: 30px; */
+  font-size: 1.875rem;
+  margin: 25px 0 20px 0;
+}
+h4 {
+  /* font-size: 26px; */
+  font-size: 1.625rem;
+  margin: 15px 0 10px 0;
+}
+h5 {
+  /* font-size: 22px; */
+  font-size: 1.375rem;
+  margin: 15px 0 10px 0;
+}
+h6 {
+  /* font-size: 18px; */
+  font-size: 1.125rem;
+  margin: 15px 0 10px 0;
+}
+
+.xTitle {
+  text-align: left;
+  position: relative;
+}
+
+.xTitle_actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.xTitle_actions h1 {
+  margin: 0;
+}
+
+.xTitle h1,
+.xTitle h2,
+.xTitle h3,
+.xTitle h4,
+.xTitle h5,
+.xTitle h6 {
+  margin-top: 0;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content blockquote,
+.content table {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+  margin: 0 0 20px 0;
+  color: var(--t1);
+}
+.content_xl p,
+.content_xl ul,
+.content_xl ol,
+.content_xl blockquote,
+.content_xl table {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.content p:last-child,
+.content ul:last-child,
+.content ol:last-child,
+.content table:last-child {
+  margin-bottom: 0;
+}
+
+.content a {
+  color: var(--color1);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+.content__outer {
+  padding: 20px 0;
+}
+
+.content ul {
+  /* padding: 0 0 0 30px; */
+}
+
+.content ol {
+  padding: 0 0 15px 25px;
+}
+
+.content ol li {
+  /* margin: 0 0 5px 0; */
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+.content ul li {
+  padding: 0 0 0 25px;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.3;
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+.content ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: #d74d63;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.content_xl ul li {
+  font-size: 1.25rem;
+}
+.content_xl ul li:before {
+  top: 12px;
+}
+
+.content blockquote h2,
+.content blockquote h3,
+.content blockquote h4,
+.content blockquote h5,
+.content blockquote h6 {
+  margin-top: 0;
+}
+
+.content blockquote {
+  margin: 60px 0;
+  background: #fff;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.08);
+  padding: 40px 60px;
+}
+
+/* .content ol {
+  counter-reset: li;
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.content ol li {
+  position: relative;
+  margin: 0;
+  padding-left: 30px;
+  color: #363636;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+} */
+
+/* .content ol li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  text-align: right;
+  display: inline-block;
+  color: var(--tc0);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+} */
+
+.content img {
+  max-width: 100%;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  height: auto;
+  .at-max(480px, {
+    margin: 0 0 10px;
+		float: none !important;
+		width: 100%;
+  });
+}
+
+/* .content b,
+.content strong {
+	font-weight: bold;
+} */
+
+.content i,
+.content cite,
+.content em,
+.content var,
+.content address,
+.content dfn {
+  font-style: italic;
+}
+
+.content table th,
+.content table td {
+  padding: 10px;
+  border: 1px solid var(--color1);
+}
+
+table.clear {
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table.clear td {
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+}
+
+.table_outer {
+  max-width: 100%;
+  overflow: auto;
+  margin-bottom: 1.25rem;
+}
+.table_outer table {
+  min-width: 500px;
+}
+
+.table_outer250 {
+  max-width: 100%;
+  overflow: auto;
+  margin-bottom: 1.25rem;
+}
+.table_outer250 table {
+  min-width: 250px;
+}

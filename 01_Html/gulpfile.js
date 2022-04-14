@@ -49,24 +49,24 @@ gulp.task("pug", function () {
 // символическая ссылка с папки в основном проекте
 gulp.task("css", function () {
 	return gulp
-		.src("src/assets/less/btl/btl.less")
+		.src("src/assets/less/main.less")
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("build/btlassets/css/"));
+		.pipe(gulp.dest("build/assets/css/"));
 });
 
 // эту папку надо самостоятельно копировать в корень диска, на котором проект - и не придется менять пути, например в файле fonts.less указывающем на путь к icomoon (иначе сделать нельзя)
-gulp.task("btlassets", function () {
-	return gulp.src("btlassets/**/*.*").pipe(gulp.dest("build/btlassets"));
-});
+// gulp.task("btlassets", function () {
+// 	return gulp.src("btlassets/**/*.*").pipe(gulp.dest("build/btlassets"));
+// });
 
 var vendorsCssFiles = [
-	"src/assets/vendors/sweetalert.css",
-	"src/assets/vendors/nouislider.min.css",
-	"src/assets/vendors/swiper-bundle.min.css",
-	"src/assets/vendors/fancybox4/ui/dist/fancybox.css",
-	"src/assets/libs/bootstrap5/dist/css/bootstrap.min.css",
+	"/node_modules/sweetalert/dist/sweetalert.css",
+	"/node_modules/nouislider/distribute/nouislider.min.css",
+	"/node_modules/swiper/swiper-bundle.min.css",
+	"/node_modules/@fancyapps/ui/dist/fancybox.css",
+	"/node_modules/bootstrap/dist/css/bootstrap.min.css",
 	"src/assets/libs/bootstrap-icons.css",
 ];
 
@@ -79,28 +79,9 @@ gulp.task("vendorsCss", function () {
 			.pipe(sourcemaps.init()) //Инициализируем sourcemap
 			.pipe(concatCss("vendors.css"))
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/btlassets/css"))
+			.pipe(gulp.dest("build/assets/css"))
 	);
 });
-
-// gulp.task("css-x1", function () {
-// 	return gulp
-// 		.src("src/assets/css/apps.css")
-// 		.pipe(rename("apps-x1.css"))
-// 		.pipe(sourcemaps.init())
-// 		.pipe(postcss([postcssImport()]))
-// 		.pipe(sourcemaps.write("."))
-// 		.pipe(gulp.dest("build/assets/css/"));
-// });
-
-// gulp.task("wysiwyg-css", function () {
-// 	return gulp
-// 		.src("src/assets/css/wysiwyg.css")
-// 		.pipe(sourcemaps.init())
-// 		.pipe(postcss([postcssImport()]))
-// 		.pipe(sourcemaps.write("."))
-// 		.pipe(gulp.dest("build/assets/css/"));
-// });
 
 gulp.task("image", function () {
 	return (
@@ -120,11 +101,9 @@ gulp.task("image", function () {
 });
 
 var vendorsJsFiles = [
-	"src/assets/vendors/jquery.min.js",
-	// "src/assets/vendors/bootstrap.min.js",
-	"src/assets/libs/bootstrap5/dist/js/bootstrap.min.js",
-	// "src/assets/vendors/jquery.fancybox.min.js",
-	"src/assets/vendors/fancybox4/ui/dist/fancybox.umd.js",
+	"/node_modules/jquery/dist/jquery.min.js",
+	"/node_modules/bootstrap/dist/js/bootstrap.min.js",
+	"/node_modules/@fancyapps/ui/dist/fancybox.umd.js",
 	"src/assets/vendors/jquery.maskedinput.js",
 	"src/assets/vendors/nouislider.min.js",
 	"src/assets/vendors/sweetalert.min.js",
