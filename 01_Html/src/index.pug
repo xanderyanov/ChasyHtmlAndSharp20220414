@@ -1,0 +1,73 @@
+- var pageTitle = 'Главная страница'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+- var sliderTitle1 = 'Популярные товары'
+- var commentsTitle = 'Отзывы'
+
+include __const
+include __header
+include __popUpBlocks
+include __mainTop
+include __card
+include __mainBox
+include __news
+include __actions
+include __eShopTovarPage
+include __forms
+include __footer
+
+include __old
+include __blocks
+include __comments
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
++head
+body
+
+  .site__header
+    +header
+
+  .site__center.mainPageIdx
+    +mainTop
+    +newLinkInMainPage
+    .wideBlock__area.mainPopular.block_mbottom
+      .wideBlock.wsite
+        .xTitle 
+          h2 Популярные процедуры
+        +eCard_inMain
+    .wideBlock__area.block_mbottom
+      .wideBlock.wsite
+        +tovarSimilarCaroucel2022
+    
+    //- .wideBlock__area
+    //-   .wideBlock.wsite
+    //-     .title.title1 
+    //-       h2 Блог нашего центра
+    //- +blogSlider
+    .wideBlock__area.actions__wrapper.block_mbottom
+      .wideBlock.wsite
+        +actions
+    .wideBlock__area.block_mbottom
+      .wideBlock.wsite
+        +mainContent
+    +commentsCaroucel
+
+    +rubricators
+    
+    +mainForm_v3
+    //- .wsite
+    //-   .tour
+    //-     iframe(src="https://rec360.ru/tour/demotour.html", frameborder="0", width="100%" height="100%") 
+    
+
+  .site__footer
+    +footer3
+      
+
+
+  +popUpBlocks
+  +scripts
+
+    

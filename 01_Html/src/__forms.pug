@@ -1,0 +1,222 @@
+mixin zBlock1
+  .zBlock1__area.w0
+    .zBlock1.w1
+      .zBlock1__intro
+        span
+          | Запишитесь прямо сейчас на консультацию по телефону 
+          a(href='tel:+78452260000') +7 (8452) 26-00-00
+          |  или заполните форму ниже:
+      form.form1.xForm(action='#')
+        input.name1(name='name1', type='text', placeholder='Ваше имя')
+        label(for="phone1") Ваш телефон
+        input.phone1(name='phone1', type='text', placeholder='+7 (987) 654-32-10')
+        //- input.email1(name='email1', type='text', placeholder='Email')
+        input.work_email1(name='work_email1', type='text', placeholder='Рабочий email')
+        //- textarea.message1(name='message1', cols='30', rows='10', placeholder='Ваше сообщение')
+        //- .form1__text
+        //-   | *Отправляя сообщение Вы соглашаетесь с условиями 
+        //-   a(href='privacy-policy/', target='_blank')
+        //-     | политики
+        //-     | конфиденциальности
+        button.submit1(type='submit', name='submit1')
+          | Записаться
+
+
+mixin zBlock3
+  .zBlock3__area
+    .zBlock3.wsite
+      .zBlock3__left(style="background-image: url(assets/img/formbg2.jpg)")
+
+      .zBlock3__right
+        .zBlock3__intro
+          h2 Запишитесь прямо сейчас на консультацию
+          span по телефону 
+            a(href='tel:+78452260000') +7 (8452) 26-00-00
+          span или заполните форму ниже:
+        form.form13.xForm(action='#')
+          //- label(for="name13") Ваше имя
+          input.name13(name='name13', type='text', placeholder='Ваше имя')
+
+          label(for="phone13") Ваш телефон
+          input.phone13(name='phone13', type='text', placeholder='+7 (987) 654-32-10')
+          //- input.email13(name='email13', type='text', placeholder='Email')
+          input.work_email13(name='work_email13', type='text', placeholder='Рабочий email')
+          //- textarea.message13(name='message13', cols='30', rows='10', placeholder='Ваше сообщение')
+          //- .form13__text
+          //-   | *Отправляя сообщение Вы соглашаетесь с условиями 
+          //-   a(href='privacy-policy/', target='_blank')
+          //-     | политики
+          //-     | конфиденциальности
+          .xFormCheck
+            input.checkbox13(type='checkbox' required='')
+            span Согласен на обработку персональных данных
+          button.submit13(type='submit', name='submit13')
+            i.icon-diamond
+            span Записаться
+
+mixin mainForm_v3
+  .mainForm3__area.block_mbottom
+    .mainForm3.wsite(style="background-image: url(assets/img/bg11.jpg)")
+      .mainForm3__left
+        .mainForm3__intro
+          .title1.title1_uppercase
+            h2 Запишитесь прямо сейчас на консультацию
+          span по телефону 
+            a(href='tel:+78452260000') +7 (8452) 26-00-00
+          span или заполните форму ниже:
+        form.form_m3.xForm(action='#')
+          .xInputWrapper
+            input.name_m3(name='name_m3', type='text', placeholder='Ваше имя')
+            label(for="name_m3") Ваше имя
+          .xInputWrapper
+            input.phone_m3(name='phone_m3', type='text', placeholder='+7 (987) 654-32-10')
+            label(for="phone_m3") Ваш телефон
+          //- input.email_m3(name='email_m3', type='text', placeholder='Email')
+          input.work_email_m3(name='work_email_m3', type='text', placeholder='Рабочий email')
+          //- textarea.message_m3(name='message_m3', cols='30', rows='10', placeholder='Ваше сообщение')
+          //- .form_m3__text
+          //-   | *Отправляя сообщение Вы соглашаетесь с условиями 
+          //-   a(href='privacy-policy/', target='_blank')
+          //-     | политики
+          //-     | конфиденциальности
+          .form_m3alrightBox.xFormCheck
+            input.checkbox_m3(type='checkbox' required='')
+            span Согласен на обработку персональных данных
+          button.submit_m3(type='submit', name='submit_m3')
+            i.icon-diamond
+            span Записаться
+      .mainForm3__right
+
+mixin formInMaster
+  .form2__area
+    .form2__intro 
+      span
+        | Запишитесь прямо сейчас на консультацию по телефону 
+        a(href='tel:+78452260000') +7 (8452) 26-00-00
+        |  или заполните форму ниже:
+
+    form.form2.xForm(action='#')
+      input.name2(name='name2', type='text', placeholder='Ваше имя')
+      input.surname2(name='surname2', type='text', placeholder='Ваша Фамилия')
+      input.phone2(name='phone2', type='text', placeholder='Контактный телефон')
+      input.email2(name='email2', type='text', placeholder='Email')
+      input.work_email2(name='work_email2', type='text', placeholder='Рабочий email')
+      //- textarea.message1(name='message1', cols='30', rows='10', placeholder='Ваше сообщение')
+      .formPolycy__text
+        | *Отправляя сообщение Вы соглашаетесь с условиями 
+        a(href='#', target='_blank')
+        | политики конфиденциальности
+      button.submit2(type='submit', name='submit2')
+        | Записаться
+
+mixin formInMaster3
+  .mf3__area
+    .mf3__intro
+      h2 Запишитесь прямо сейчас на консультацию
+      span к нашему специалисту по телефону: 
+        a(href='tel:+78452260000') +7 (8452) 26-00-00
+      span или заполните форму ниже:
+    form.mf3.xForm(action='#')
+      .xInputWrapper
+        input.name_mf3(name='name_mf3' type='text' placeholder='Ваше имя')
+        label(for="name_mf3") Ваше имя
+      .xInputWrapper
+        input.phone_mf3(name='phone_mf3' type='text' placeholder='Ваш телефон')
+        label(for="phone_mf3") Ваш телефон
+      //- input.email_mf3(name='email_mf3', type='text', placeholder='Email')
+      input.work_email_mf3(name='work_email_mf3', type='text', placeholder='Рабочий email')
+      //- textarea.message_mf3(name='message_mf3', cols='30', rows='10', placeholder='Ваше сообщение')
+      //- .form_mf3__text
+      //-   | *Отправляя сообщение Вы соглашаетесь с условиями 
+      //-   a(href='privacy-policy/', target='_blank')
+      //-     | политики
+      //-     | конфиденциальности
+      .form_mf3alrightBox.xFormCheck
+        input.checkbox_mf3(type='checkbox' required='')
+        span Согласен на обработку персональных данных
+      button.submit_mf3(type='submit', name='submit_mf3')
+        i.icon-diamond
+        span Записаться
+
+
+mixin formCallBack
+  .formZ__area
+    .formZ__wrapper
+      .formZ__close
+        i.icon-close1
+      .formZ__intro 
+        span 
+          | Закажите обратный звонок, заполнив форму ниже или позвоните нам по телефону 
+        a(href='tel:+78452260000') +7 (8452) 26-00-00.
+
+      form.formZ.xForm(action='#')
+          input.nameZ(name='nameZ', type='text', placeholder='Ваше имя')
+          input.phoneZ(name='phoneZ', type='text', placeholder='Контактный телефон')
+          //- input.email1(name='email1', type='text', placeholder='Email')
+          input.work_emailZ(name='work_emailZ', type='text', placeholder='Рабочий email')
+          //- textarea.message1(name='message1', cols='30', rows='10', placeholder='Ваше сообщение')
+          .formPolycy__text
+            | *Отправляя сообщение Вы соглашаетесь с условиями 
+            a(href='#', target='_blank')
+            | политики конфиденциальности
+          button.submitZ(type='submit', name='submitZ')
+            | Заказать обратный звонок
+
+
+mixin formInContactsPage
+  .form3__area
+    .form3__intro 
+      span
+        | Запишитесь прямо сейчас на консультацию по телефону 
+        a(href='tel:+78452260000') +7 (8452) 26-00-00
+        |  или заполните форму ниже:
+
+    form.form3.xForm(action='#')
+        .xInputWrapper
+          input.name3(name='name3', type='text', placeholder='Ваше имя:')
+          label(for="name3") Ваше имя:
+        .xInputWrapper
+          input.surname3(name='surname3', type='text', placeholder='Ваша Фамилия:')
+          label(for="surname3") Ваша Фамилия:
+        .xInputWrapper
+          input.phone3(name='phone3', type='text', placeholder='Контактный телефон:')
+          label(for="phone3") Контактный телефон:
+        .xInputWrapper
+          input.email3(name='email3', type='text', placeholder='Email:')
+          label(for="email3") Email:
+        input.work_email3(name='work_email3', type='text', placeholder='Рабочий email')
+        .xInputWrapper
+          textarea.message3(name='message3', cols='30', rows='10', placeholder='Ваше сообщение:')
+          label(for="message3") Ваше сообщение:
+        .form_mf3alrightBox.xFormCheck
+          input.checkbox3(type='checkbox' required='')
+          span Согласен на обработку персональных данных
+        button.submit3(type='submit', name='submit3')
+          i.icon-diamond
+          span Записаться
+
+
+
+mixin formConsInMain
+  .form4__area
+    .form4__wrapper
+      .form4__close
+        i.icon-close1
+      .form4__intro 
+        span 
+          | Закажите обратный звонок, заполнив форму ниже или позвоните нам по телефону 
+        a(href='tel:+78452260000') +7 (8452) 26-00-00.
+
+      form.form4.xForm(action='#')
+        input.name4(name='name4', type='text', placeholder='Ваше имя')
+        input.surname4(name='surname4', type='text', placeholder='Ваша Фамилия')
+        input.phone4(name='phone4', type='text', placeholder='Контактный телефон')
+        input.email4(name='email4', type='text', placeholder='Email')
+        input.work_email4(name='work_email4', type='text', placeholder='Рабочий email')
+        textarea.message4(name='message4', cols='30', rows='10', placeholder='Ваше сообщение')
+        .formPolycy__text
+          | *Отправляя сообщение Вы соглашаетесь с условиями 
+          a(href='#', target='_blank')
+          | политики конфиденциальности
+        button.submit4(type='submit', name='submit4')
+          | Записаться

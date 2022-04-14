@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/*/bin
+/*/obj
+*.generated.cs
+*.cd
+*.user
+*.su
+*.suo
+/10-YClientsApi/doc/Records.json
+/10-YClientsApi/doc/RecordsV2.json
+/10-YClientsApi/doc/RecordsV2a.json
+/01_Html/node_modules
+/01_Html/build
+/01_Html/src/assets/img
+/01_Html/src/assets/video

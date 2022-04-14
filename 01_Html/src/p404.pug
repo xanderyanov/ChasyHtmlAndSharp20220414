@@ -1,0 +1,63 @@
+- var pageTitle = 'Главная страница'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+- var sliderTitle1 = 'Популярные товары'
+- var commentsTitle = 'Отзывы'
+
+include __const
+include __header
+include __popUpBlocks
+include __mainTop
+include __card
+include __mainBox
+include __news
+include __actions
+include __eShopTovarPage
+include __forms
+include __footer
+
+include __old
+include __blocks
+include __comments
+include __breadcrumbs
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
++head
+body
+
+  .site__header
+    +header
+
+  .site__center
+    +breadcrumbs4
+
+    .wsite.pt-5
+      .p404__area 
+        .p404 
+          h1.text-center.mb-5 Страница 404
+          span.text-center.mb-4 Вы попали на страницу, которая была перемещена, удалена или исчезла подругим причинам 
+          span.text-center.mb-5 Можете посмотреть наши популярные процедуры или товары, использовать навигацию по меню, а также вернуться на <a href="/">Главную страницу</a>
+
+
+    .wideBlock__area.mainPopular
+      .wideBlock.wsite
+        .xTitle 
+          h2 Популярные процедуры
+        +eCard_inMain
+    .wideBlock__area
+      .wideBlock.wsite
+        +tovarSimilarCaroucel
+    
+    
+
+  .site__footer
+    +footer3
+      
+
+
+  +popUpBlocks
+  +scripts
+
+    

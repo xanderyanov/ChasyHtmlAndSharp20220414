@@ -1,0 +1,184 @@
+mixin header 
+  .topLine__area 
+    .topLine.wsite 
+      .topLine__address 
+        i.icon-marker3
+        span ул. Московская, 117, 2 этаж, ТК "МИР"
+      a.topLine__instagram(href="") 
+        i.icon-instagram2
+      nav.topLine__menuArea
+        ul.topLine__menu 
+          li
+            a(href="#") О нас
+          li
+            a(href="#") Блог
+          li
+            a(href="#") Правовая информация
+          li
+            a(href="#") Контакты
+      .topLine__login 
+        i.icon-eavatar
+        span Войти / Регистрация
+  .header__area 
+    header.header.wsite
+      .logo1__area
+        .header__menuBtn.leftSlideMenu_js
+          i.icon-hamburger1
+        .logo1 
+          a(href="")
+            img(src="btlassets/img/logo-1-fff.svg", alt="") 
+      .btn.btn1 Решить проблему
+      nav.header__menuArea
+        ul.header__menu 
+          li
+            a(href="#") Услуги
+            ul
+              li.first
+                a(href='#') Аппаратная косметология
+              li
+                a(href='#') Инъекционная косметология
+              li
+                a(href='#') Интимная косметология
+              li
+                a(href='#') Лечебная косметология
+              li
+                a(href='#') Имидж-студия
+              li.last
+                a(href='#') Эстетика и уход
+          li
+            a(href="#") Специалисты
+          li
+            a(href="#") Оборудование
+          li
+            a(href="#") E-Shop
+      a.header__phone(href="tel:+78452260000") +7 (8452) 26-00-00
+      .header__iBtns 
+        //- .iBtn.topSearch_JS 
+        .iBtn.eSearch_js 
+          i.icon-search2
+        a.iBtn(href="#")
+          i.icon-eheart1
+          span 10
+        a.iBtn(href="#") 
+          i.icon-eshopping-cart
+          span 10
+    +eSearch
+
+mixin eSearch 
+  .eSearch__Overlay
+  .eSearch__Area
+    .eSearch__Outer
+      .eSearch.wsite
+        .logo1
+          a(href="#")
+            img(src="btlassets/img/logo-1-fff.svg", alt="")
+        form.eSearch__Form(action="")
+          input(type="text" placeholder="Процедура, проблема или товар?")
+          button(type="submit") 
+            i.icon-search2
+        .eSearch__FormClose(title="Скрыть поиск")
+          i.icon-close1
+      .searchPreResults__area
+        ul.searchPreResults.xScroll2
+          li
+            a(href='#')
+              span.searchPreResults__infoOnly
+                span.searchPreResults__title Женщинам / Уход за телом / 
+                span.searchPreResults__title.searchPreResults__title_bold Крема
+          li
+            a(href='#')
+              span.searchPreResults__infoOnly
+                span.searchPreResults__title Женщинам / Уход за телом / 
+                span.searchPreResults__title.searchPreResults__title_bold Шампуни
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/01.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title <b>Кросс</b>овки
+                span.slash1 /
+                span.searchPreResults__brand Clemento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/02.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Платье
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/03.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Брюки
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/04.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Платье
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/05.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Брюки
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/06.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Платье
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/07.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Брюки
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/08.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Брюки
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/09.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Платье
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+          li
+            a(href="")
+              span.searchPreResults__img
+                img(src="btlassets/img/ecatalog/10.jpg", alt="")
+              span.searchPreResults__info
+                span.searchPreResults__title Брюки
+                span.slash1 /
+                span.searchPreResults__brand Rinachimento
+              span.searchPreResults__price 5184 ₽
+        //- a.searchPreResults__allBtn(href="") Показать все результаты
+
